@@ -14,7 +14,7 @@ public class Item {
 
 	 try
 	 {
-	 Class.forName("com.mysql.cj.jdbc.Driver");
+	 Class.forName("com.mysql.jdbc.Driver");
 	 con= DriverManager.getConnection("jdbc:mysql://127.0.0.1:3306/items",
 	 "root", "");
 	 //For testing

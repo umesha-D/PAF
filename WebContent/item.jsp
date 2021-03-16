@@ -95,23 +95,31 @@
 <!DOCTYPE html>
 <html>
 <head>
+<link rel="stylesheet" href="Views/bootstrap.min.css">
 <meta charset="ISO-8859-1">
 <title>Items Management</title>
 </head>
 <body>
+<div class = "container">
+<div class = "row">
+<div class = "col">
 	<h1>Items Management</h1>
 	<form method="post" action="item.jsp">
-		Item code: <input name="ItemCode" value="<%out.print(itemCode);%>"type="text"><br> 
-		Item name: <input name="ItemName"value="<%out.print(itemName);%>" type="text"><br> 
-		Item price: <input name="ItemPrice" value="<%out.print(itemPrice);%>"type="text"><br> 
-		Item description: <input name="ItemDesc" value="<%out.print(itemDesc);%>" type="text"><br>
-		<input name="btnSubmit" type="submit" value="Save">
+		Item code: <input name="ItemCode" type="text" class="from-control"><br> 
+		Item name: <input name="ItemName" type="text" class="from-control"><br> 
+		Item price: <input name="ItemPrice" type="text" class ="form-control">"<br> 
+		Item description: <input name="ItemDesc" type="text" class ="from-control" ><br>
+		<input name="btnSubmit" type="submit" value="Save" class="btn btn-primary"><br>
 	</form>
-
+	
+	<br/>
 	<!-- Show output -->
-	<%
- 	out.print(session.getAttribute("statusMsg")); 
-	%>
+
+	<div class="alert alert-success">
+ 		<% out.print(session.getAttribute("statusMsg")); %>
+ 		
+ 	</div>
+	
 	<br>
 	<%
 	 Item itemObj = new Item(); 
